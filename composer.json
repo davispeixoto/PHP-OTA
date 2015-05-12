@@ -1,0 +1,29 @@
+{
+  "name": "davispeixoto/opentravel-alliance",
+  "description": "A PHP implementation of OTA (OpenTravel Alliance) 2014B specifications",
+  "keywords": [
+    "OTA",
+    "OpenTravel Alliance",
+    "Open Travel Alliance"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Davis Peixoto",
+      "email": "davis.peixoto@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "myclabs/php-enum": "1.3.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Davispeixoto\\OpenTravelAlliance\\": "src/Davispeixoto/OpenTravelAlliance"
+    }
+  },
+  "minimum-stability": "dev"
+}
