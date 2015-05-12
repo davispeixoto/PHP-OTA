@@ -7,6 +7,7 @@ A PHP implementation of [OTA (OpenTravel Alliance)](http://www.opentravel.org/De
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/davispeixoto/PHP-OTA/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/davispeixoto/PHP-OTA/?branch=master)
 [![Codacy Badge](https://www.codacy.com/project/badge/fabf9b831e5944d28c112c0b91447106)](https://www.codacy.com/app/davis-peixoto/PHP-OTA)
 [![Code Climate](https://codeclimate.com/github/davispeixoto/PHP-OTA/badges/gpa.svg)](https://codeclimate.com/github/davispeixoto/PHP-OTA)
+[![Build Status](https://travis-ci.org/davispeixoto/PHP-OTA.svg?branch=master)](https://travis-ci.org/davispeixoto/PHP-OTA)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d0f68366-00e9-4bb5-8310-a50af4e542a2/small.png)](https://insight.sensiolabs.com/projects/d0f68366-00e9-4bb5-8310-a50af4e542a2)
 
 ## Installation
