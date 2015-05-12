@@ -2,12 +2,12 @@
 
 A PHP implementation of [OTA (OpenTravel Alliance)](http://www.opentravel.org/Default.aspx) [2014B specifications](http://www.opentravel.org/Specifications/SchemaIndex.aspx?FolderName=2014B).
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/davispeixoto/calendar.svg)](https://packagist.org/packages/davispeixoto/calendar)
-[![Total Downloads](https://img.shields.io/packagist/dt/davispeixoto/calendar.svg)](https://packagist.org/packages/davispeixoto/calendar)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/davispeixoto/PHP-iCal/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/davispeixoto/PHP-iCal/?branch=master)
-[![Codacy Badge](https://www.codacy.com/project/badge/7f809a8ef1044ed283be4fa2583a45fc)](https://www.codacy.com/app/davis-peixoto/PHP-iCal)
-[![Code Climate](https://codeclimate.com/github/davispeixoto/PHP-iCal/badges/gpa.svg)](https://codeclimate.com/github/davispeixoto/PHP-iCal)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/581b1e12-b229-44ea-99df-75cf1f9f9dcd/small.png)](https://insight.sensiolabs.com/projects/581b1e12-b229-44ea-99df-75cf1f9f9dcd)
+[![Latest Stable Version](https://img.shields.io/packagist/v/davispeixoto/opentravel-alliance.svg)](https://packagist.org/packages/davispeixoto/opentravel-alliance)
+[![Total Downloads](https://img.shields.io/packagist/dt/davispeixoto/opentravel-alliance.svg)](https://packagist.org/packages/davispeixoto/opentravel-alliance)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/davispeixoto/PHP-OTA/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/davispeixoto/PHP-OTA/?branch=master)
+[![Codacy Badge](https://www.codacy.com/project/badge/fabf9b831e5944d28c112c0b91447106)](https://www.codacy.com/app/davis-peixoto/PHP-OTA)
+[![Code Climate](https://codeclimate.com/github/davispeixoto/PHP-OTA/badges/gpa.svg)](https://codeclimate.com/github/davispeixoto/PHP-OTA)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d0f68366-00e9-4bb5-8310-a50af4e542a2/small.png)](https://insight.sensiolabs.com/projects/d0f68366-00e9-4bb5-8310-a50af4e542a2)
 
 ## Installation
 
