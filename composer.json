@@ -6,6 +6,10 @@
     "OpenTravel Alliance",
     "Open Travel Alliance"
   ],
+  "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/goetas/serializer.git"
+  }],
   "license": "MIT",
   "authors": [
     {
@@ -15,7 +19,10 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "myclabs/php-enum": "1.3.2"
+    "myclabs/php-enum": "1.3.2",
+    "goetas/xsd2php":"2.*@dev",
+    "goetas/xsd-reader":"2.*@dev",
+    "jms/serializer": "xsd2php-dev as 0.18.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0"

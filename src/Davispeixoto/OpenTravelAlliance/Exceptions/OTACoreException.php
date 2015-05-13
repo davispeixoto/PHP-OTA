@@ -1,9 +1,9 @@
 <?php namespace Davispeixoto\Calendar\Exceptions;
 
-/**
- * Class OTACoreException
- * @package Davispeixoto\OpenTravelAlliance\Exceptions
- */
+    /**
+     * Class OTACoreException
+     * @package Davispeixoto\OpenTravelAlliance\Exceptions
+     */
 
 /**
  * Created by Davis Peixoto <davis.peixoto@gmail.com>.
