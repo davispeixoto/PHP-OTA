@@ -89,6 +89,8 @@ class CarrierFeeInfoAType
         if (isset($index)) {
             return isset($this->carrierFee[$index]);
         }
+
+        return false;
     }
 
     /**
@@ -165,6 +167,8 @@ class CarrierFeeInfoAType
         if (isset($index)) {
             return isset($this->taxes[$index]);
         }
+
+        return false;
     }
 
     /**

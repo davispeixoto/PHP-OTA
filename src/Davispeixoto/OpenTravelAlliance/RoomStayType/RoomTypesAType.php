@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\RoomStayType;
 
+use Davispeixoto\OpenTravelAlliance\RoomTypeType;
+
 /**
  * Class representing RoomTypesAType
  */
@@ -9,7 +11,7 @@ class RoomTypesAType
 {
 
     /**
-     * @property \Davispeixoto\OpenTravelAlliance\RoomTypeType[] $roomType
+     * @property RoomTypeType[] $roomType
      */
     private $roomType = null;
 
@@ -17,9 +19,9 @@ class RoomTypesAType
      * Adds as roomType
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\RoomTypeType $roomType
+     * @param RoomTypeType $roomType
      */
-    public function addToRoomType(\Davispeixoto\OpenTravelAlliance\RoomTypeType $roomType)
+    public function addToRoomType(RoomTypeType $roomType)
     {
         $this->roomType[] = $roomType;
 
@@ -51,7 +53,7 @@ class RoomTypesAType
     /**
      * Gets as roomType
      *
-     * @return \Davispeixoto\OpenTravelAlliance\RoomTypeType[]
+     * @return RoomTypeType[]
      */
     public function getRoomType()
     {
@@ -61,7 +63,7 @@ class RoomTypesAType
     /**
      * Sets a new roomType
      *
-     * @param \Davispeixoto\OpenTravelAlliance\RoomTypeType[] $roomType
+     * @param RoomTypeType[] $roomType
      * @return self
      */
     public function setRoomType(array $roomType)

@@ -317,6 +317,8 @@ class CustLoyaltyAType
         if (isset($index)) {
             return isset($this->vendorCode[$index]);
         }
+
+        return false;
     }
 
     /**

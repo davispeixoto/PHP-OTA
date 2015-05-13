@@ -45,6 +45,8 @@ class TaxesAType
         if (isset($index)) {
             return isset($this->tax[$index]);
         }
+
+        return false;
     }
 
     /**

@@ -427,6 +427,8 @@ class TicketDocumentAType
         if (isset($index)) {
             return isset($this->couponInfo[$index]);
         }
+
+        return false;
     }
 
     /**

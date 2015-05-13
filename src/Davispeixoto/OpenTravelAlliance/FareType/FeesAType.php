@@ -156,6 +156,8 @@ class FeesAType
         if (isset($index)) {
             return isset($this->fee[$index]);
         }
+
+        return false;
     }
 
     /**

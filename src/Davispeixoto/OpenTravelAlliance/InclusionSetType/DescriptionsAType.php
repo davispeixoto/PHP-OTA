@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\InclusionSetType;
 
+use Davispeixoto\OpenTravelAlliance\ParagraphType;
+
 /**
  * Class representing DescriptionsAType
  */
@@ -9,7 +11,7 @@ class DescriptionsAType
 {
 
     /**
-     * @property \Davispeixoto\OpenTravelAlliance\ParagraphType[] $description
+     * @property ParagraphType[] $description
      */
     private $description = null;
 
@@ -17,9 +19,9 @@ class DescriptionsAType
      * Adds as description
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\ParagraphType $description
+     * @param ParagraphType $description
      */
-    public function addToDescription(\Davispeixoto\OpenTravelAlliance\ParagraphType $description)
+    public function addToDescription(ParagraphType $description)
     {
         $this->description[] = $description;
 
@@ -51,7 +53,7 @@ class DescriptionsAType
     /**
      * Gets as description
      *
-     * @return \Davispeixoto\OpenTravelAlliance\ParagraphType[]
+     * @return ParagraphType[]
      */
     public function getDescription()
     {
@@ -61,7 +63,7 @@ class DescriptionsAType
     /**
      * Sets a new description
      *
-     * @param \Davispeixoto\OpenTravelAlliance\ParagraphType[] $description
+     * @param ParagraphType[] $description
      * @return self
      */
     public function setDescription(array $description)

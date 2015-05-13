@@ -45,6 +45,8 @@ class DiscountsAType
         if (isset($index)) {
             return isset($this->discount[$index]);
         }
+
+        return false;
     }
 
     /**

@@ -144,6 +144,8 @@ class FeeAmountAType
         if (isset($index)) {
             return isset($this->applicationCode[$index]);
         }
+
+        return false;
     }
 
     /**

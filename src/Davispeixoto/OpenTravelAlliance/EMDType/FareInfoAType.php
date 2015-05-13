@@ -497,6 +497,8 @@ class FareInfoAType extends ETFareInfoType
         if (isset($index)) {
             return isset($this->penaltyAmount[$index]);
         }
+
+        return false;
     }
 
     /**

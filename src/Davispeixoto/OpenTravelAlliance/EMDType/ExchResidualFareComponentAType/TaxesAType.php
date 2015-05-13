@@ -32,7 +32,7 @@ class TaxesAType
     /**
      * isset tax
      *
-     * @param scalar $index
+     * @param int $index
      * @return boolean
      */
     public function issetTax($index)
@@ -40,17 +40,19 @@ class TaxesAType
         if (isset($index)) {
             return isset($this->tax[$index]);
         }
+
+        return false;
     }
 
     /**
      * unset tax
      *
-     * @param scalar $index
+     * @param int $index
      * @return void
      */
     public function unsetTax($index)
     {
-        if (isset($index)) {
+        if (isset($index) && array_key_exists($index, $this->tax)) {
             unset($this->tax[$index]);
         }
     }
@@ -71,13 +73,10 @@ class TaxesAType
      * @param \Davispeixoto\OpenTravelAlliance\AirTaxType[] $tax
      * @return self
      */
-    public function setTax(array $tax)
+    public function setTax(Array $tax)
     {
         $this->tax = $tax;
 
         return $this;
     }
-
-
 }
-

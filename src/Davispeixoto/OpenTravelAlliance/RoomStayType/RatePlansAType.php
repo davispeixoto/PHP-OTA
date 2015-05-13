@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\RoomStayType;
 
+use Davispeixoto\OpenTravelAlliance\RatePlanType;
+
 /**
  * Class representing RatePlansAType
  */
@@ -9,7 +11,7 @@ class RatePlansAType
 {
 
     /**
-     * @property \Davispeixoto\OpenTravelAlliance\RatePlanType[] $ratePlan
+     * @property RatePlanType[] $ratePlan
      */
     private $ratePlan = null;
 
@@ -17,9 +19,9 @@ class RatePlansAType
      * Adds as ratePlan
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\RatePlanType $ratePlan
+     * @param RatePlanType $ratePlan
      */
-    public function addToRatePlan(\Davispeixoto\OpenTravelAlliance\RatePlanType $ratePlan)
+    public function addToRatePlan(RatePlanType $ratePlan)
     {
         $this->ratePlan[] = $ratePlan;
 
@@ -51,7 +53,7 @@ class RatePlansAType
     /**
      * Gets as ratePlan
      *
-     * @return \Davispeixoto\OpenTravelAlliance\RatePlanType[]
+     * @return RatePlanType[]
      */
     public function getRatePlan()
     {
@@ -61,7 +63,7 @@ class RatePlansAType
     /**
      * Sets a new ratePlan
      *
-     * @param \Davispeixoto\OpenTravelAlliance\RatePlanType[] $ratePlan
+     * @param RatePlanType[] $ratePlan
      * @return self
      */
     public function setRatePlan(array $ratePlan)

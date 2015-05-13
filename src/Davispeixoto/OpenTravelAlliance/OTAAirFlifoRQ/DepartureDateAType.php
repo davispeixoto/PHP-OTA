@@ -2,6 +2,9 @@
 
 namespace Davispeixoto\OpenTravelAlliance\OTAAirFlifoRQ;
 
+use DateTime;
+use Davispeixoto\OpenTravelAlliance\Exceptions\OTACoreException;
+
 /**
  * Class representing DepartureDateAType
  */
@@ -9,33 +12,34 @@ class DepartureDateAType
 {
 
     /**
-     * @property \DateTime $__value
+     * @property DateTime $theValue
      */
-    private $__value = null;
+    private $theValue = null;
 
     /**
      * Construct
      *
-     * @param \DateTime $value
+     * @param DateTime $value
      */
-    public function __construct(\DateTime $value)
+    public function __construct(DateTime $value)
     {
-        $this->value($value);
+        $this->theValue = $value;
     }
 
-    /**
-     * Gets or sets the inner value
-     *
-     * @param \DateTime $value
-     * @return \DateTime
-     */
-    public function value()
+    public function __set($var, $value)
     {
-        if ($args = func_get_args()) {
-            $this->__value = $args[0];
+        if (property_exists($this, $var)) {
+            $this->$var = $value;
+        }
+    }
+
+    public function __get($var)
+    {
+        if (property_exists($this, $var)) {
+            return $this->$var;
         }
 
-        return $this->__value;
+        throw new OTACoreException('Property does not exists');
     }
 
     /**
@@ -45,7 +49,7 @@ class DepartureDateAType
      */
     public function __toString()
     {
-        return strval($this->__value);
+        return strval($this->theValue);
     }
 
 

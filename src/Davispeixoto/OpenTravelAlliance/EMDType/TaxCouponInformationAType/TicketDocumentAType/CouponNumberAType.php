@@ -123,6 +123,8 @@ class CouponNumberAType
         if (isset($index)) {
             return isset($this->tax[$index]);
         }
+
+        return false;
     }
 
     /**
@@ -196,6 +198,8 @@ class CouponNumberAType
         if (isset($index)) {
             return isset($this->unticketedPointInfo[$index]);
         }
+
+        return false;
     }
 
     /**

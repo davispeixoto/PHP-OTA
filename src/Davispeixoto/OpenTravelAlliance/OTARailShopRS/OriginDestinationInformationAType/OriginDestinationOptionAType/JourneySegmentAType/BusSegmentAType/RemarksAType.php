@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\OTARailShopRS\OriginDestinationInformationAType\OriginDestinationOptionAType\JourneySegmentAType\BusSegmentAType;
 
+use Davispeixoto\OpenTravelAlliance\WarningType;
+
 /**
  * Class representing RemarksAType
  */
@@ -9,7 +11,7 @@ class RemarksAType
 {
 
     /**
-     * @property \Davispeixoto\OpenTravelAlliance\WarningType[] $remark
+     * @property WarningType[] $remark
      */
     private $remark = null;
 
@@ -17,9 +19,9 @@ class RemarksAType
      * Adds as remark
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\WarningType $remark
+     * @param WarningType $remark
      */
-    public function addToRemark(\Davispeixoto\OpenTravelAlliance\WarningType $remark)
+    public function addToRemark(WarningType $remark)
     {
         $this->remark[] = $remark;
 
@@ -51,7 +53,7 @@ class RemarksAType
     /**
      * Gets as remark
      *
-     * @return \Davispeixoto\OpenTravelAlliance\WarningType[]
+     * @return WarningType[]
      */
     public function getRemark()
     {
@@ -61,7 +63,7 @@ class RemarksAType
     /**
      * Sets a new remark
      *
-     * @param \Davispeixoto\OpenTravelAlliance\WarningType[] $remark
+     * @param WarningType[] $remark
      * @return self
      */
     public function setRemark(array $remark)

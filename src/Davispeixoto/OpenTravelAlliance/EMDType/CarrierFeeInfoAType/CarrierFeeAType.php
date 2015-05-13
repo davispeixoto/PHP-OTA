@@ -476,6 +476,8 @@ class CarrierFeeAType
         if (isset($index)) {
             return isset($this->feeAmount[$index]);
         }
+
+        return false;
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\DynamicPkgType\ComponentsAType\PackageOptionComponentAType;
 
+use Davispeixoto\OpenTravelAlliance\PackageOptionType;
+
 /**
  * Class representing PackageOptionsAType
  */
@@ -9,7 +11,7 @@ class PackageOptionsAType
 {
 
     /**
-     * @property \Davispeixoto\OpenTravelAlliance\PackageOptionType[] $packageOption
+     * @property PackageOptionType[] $packageOption
      */
     private $packageOption = null;
 
@@ -17,9 +19,9 @@ class PackageOptionsAType
      * Adds as packageOption
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\PackageOptionType $packageOption
+     * @param PackageOptionType $packageOption
      */
-    public function addToPackageOption(\Davispeixoto\OpenTravelAlliance\PackageOptionType $packageOption)
+    public function addToPackageOption(PackageOptionType $packageOption)
     {
         $this->packageOption[] = $packageOption;
 
@@ -51,7 +53,7 @@ class PackageOptionsAType
     /**
      * Gets as packageOption
      *
-     * @return \Davispeixoto\OpenTravelAlliance\PackageOptionType[]
+     * @return PackageOptionType[]
      */
     public function getPackageOption()
     {
@@ -61,7 +63,7 @@ class PackageOptionsAType
     /**
      * Sets a new packageOption
      *
-     * @param \Davispeixoto\OpenTravelAlliance\PackageOptionType[] $packageOption
+     * @param PackageOptionType[] $packageOption
      * @return self
      */
     public function setPackageOption(array $packageOption)

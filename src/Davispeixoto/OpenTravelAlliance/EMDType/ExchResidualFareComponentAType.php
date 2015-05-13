@@ -54,6 +54,8 @@ class ExchResidualFareComponentAType extends FareComponentType
         if (isset($index)) {
             return isset($this->taxes[$index]);
         }
+
+        return false;
     }
 
     /**

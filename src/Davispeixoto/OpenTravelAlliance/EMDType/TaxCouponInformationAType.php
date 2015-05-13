@@ -116,6 +116,8 @@ class TaxCouponInformationAType
         if (isset($index)) {
             return isset($this->ticketDocument[$index]);
         }
+
+        return false;
     }
 
     /**
