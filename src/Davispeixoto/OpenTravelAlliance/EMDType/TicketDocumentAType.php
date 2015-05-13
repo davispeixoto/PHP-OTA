@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType;
 
+use Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType;
+
 /**
  * Class representing TicketDocumentAType
  */
@@ -91,9 +93,7 @@ class TicketDocumentAType
      * Number, status, in connection nbr, itinerary sequence nbr, coupon ref, not valid
      * before/after, involuntary indicator, and in connection qualfier.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType[]
-     * $couponInfo
+     * @property CouponInfoAType[] $couponInfo
      */
     private $couponInfo = null;
 
@@ -405,13 +405,9 @@ class TicketDocumentAType
      * before/after, involuntary indicator, and in connection qualfier.
      *
      * @return self
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType
-     * $couponInfo
+     * @param CouponInfoAType $couponInfo
      */
-    public function addToCouponInfo(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType $couponInfo
-    ) {
+    public function addToCouponInfo(CouponInfoAType $couponInfo) {
         $this->couponInfo[] = $couponInfo;
 
         return $this;
@@ -428,7 +424,9 @@ class TicketDocumentAType
      */
     public function issetCouponInfo($index)
     {
-        return isset($this->couponInfo[$index]);
+        if (isset($index)) {
+            return isset($this->couponInfo[$index]);
+        }
     }
 
     /**
@@ -442,7 +440,9 @@ class TicketDocumentAType
      */
     public function unsetCouponInfo($index)
     {
-        unset($this->couponInfo[$index]);
+        if (isset($index)) {
+            unset($this->couponInfo[$index]);
+        }
     }
 
     /**
@@ -465,12 +465,10 @@ class TicketDocumentAType
      * Number, status, in connection nbr, itinerary sequence nbr, coupon ref, not valid
      * before/after, involuntary indicator, and in connection qualfier.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType[]
-     * $couponInfo
+     * @param CouponInfoAType $couponInfo
      * @return self
      */
-    public function setCouponInfo(array $couponInfo)
+    public function setCouponInfo(CouponInfoAType $couponInfo)
     {
         $this->couponInfo = $couponInfo;
 

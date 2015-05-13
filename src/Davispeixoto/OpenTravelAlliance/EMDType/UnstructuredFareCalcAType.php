@@ -9,9 +9,9 @@ class UnstructuredFareCalcAType
 {
 
     /**
-     * @property string $__value
+     * @property string $theValue
      */
-    private $__value = null;
+    private $theValue = null;
 
     /**
      * Used to identify the method of pricing for this transaction (e.g., manual,
@@ -68,11 +68,13 @@ class UnstructuredFareCalcAType
      */
     public function value()
     {
-        if ($args = func_get_args()) {
-            $this->__value = $args[0];
+        $args = func_get_args();
+
+        if (!empty($args)) {
+            $this->theValue = $args[0];
         }
 
-        return $this->__value;
+        return $this->theValue;
     }
 
     /**
@@ -82,7 +84,7 @@ class UnstructuredFareCalcAType
      */
     public function __toString()
     {
-        return strval($this->__value);
+        return strval($this->theValue);
     }
 
     /**

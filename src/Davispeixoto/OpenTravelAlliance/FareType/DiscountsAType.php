@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\FareType;
 
+use Davispeixoto\OpenTravelAlliance\FareType\DiscountsAType\DiscountAType;
+
 /**
  * Class representing DiscountsAType
  */
@@ -11,9 +13,7 @@ class DiscountsAType
     /**
      * Provides discount information associated with the fare.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\FareType\DiscountsAType\DiscountAType[]
-     * $discount
+     * @property DiscountAType[] $discount
      */
     private $discount = null;
 
@@ -23,10 +23,9 @@ class DiscountsAType
      * Provides discount information associated with the fare.
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\FareType\DiscountsAType\DiscountAType
-     * $discount
+     * @param DiscountAType $discount
      */
-    public function addToDiscount(\Davispeixoto\OpenTravelAlliance\FareType\DiscountsAType\DiscountAType $discount)
+    public function addToDiscount(DiscountAType $discount)
     {
         $this->discount[] = $discount;
 
@@ -43,7 +42,9 @@ class DiscountsAType
      */
     public function issetDiscount($index)
     {
-        return isset($this->discount[$index]);
+        if (isset($index)) {
+            return isset($this->discount[$index]);
+        }
     }
 
     /**
@@ -56,7 +57,9 @@ class DiscountsAType
      */
     public function unsetDiscount($index)
     {
-        unset($this->discount[$index]);
+        if (isset($index)) {
+            unset($this->discount[$index]);
+        }
     }
 
     /**
@@ -64,7 +67,7 @@ class DiscountsAType
      *
      * Provides discount information associated with the fare.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\FareType\DiscountsAType\DiscountAType[]
+     * @return DiscountAType[]
      */
     public function getDiscount()
     {

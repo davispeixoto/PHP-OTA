@@ -5,11 +5,14 @@ namespace Davispeixoto\OpenTravelAlliance\EMDType\ExchResidualFareComponentAType
 /**
  * Class representing TaxesAType
  */
+
+use Davispeixoto\OpenTravelAlliance\AirTaxType;
+
 class TaxesAType
 {
 
     /**
-     * @property \Davispeixoto\OpenTravelAlliance\AirTaxType[] $tax
+     * @property AirTaxType[] $tax
      */
     private $tax = null;
 
@@ -17,9 +20,9 @@ class TaxesAType
      * Adds as tax
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType $tax
+     * @param AirTaxType $tax
      */
-    public function addToTax(\Davispeixoto\OpenTravelAlliance\AirTaxType $tax)
+    public function addToTax(AirTaxType $tax)
     {
         $this->tax[] = $tax;
 
@@ -34,7 +37,9 @@ class TaxesAType
      */
     public function issetTax($index)
     {
-        return isset($this->tax[$index]);
+        if (isset($index)) {
+            return isset($this->tax[$index]);
+        }
     }
 
     /**
@@ -45,7 +50,9 @@ class TaxesAType
      */
     public function unsetTax($index)
     {
-        unset($this->tax[$index]);
+        if (isset($index)) {
+            unset($this->tax[$index]);
+        }
     }
 
     /**

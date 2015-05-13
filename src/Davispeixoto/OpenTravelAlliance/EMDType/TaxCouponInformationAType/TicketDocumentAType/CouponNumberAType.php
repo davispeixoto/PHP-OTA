@@ -2,6 +2,10 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType;
 
+use Davispeixoto\OpenTravelAlliance\AirTaxType;
+use Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\TaxCouponInfoAType;
+use Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\UnticketedPointInfoAType;
+
 /**
  * Class representing CouponNumberAType
  */
@@ -18,16 +22,14 @@ class CouponNumberAType
     /**
      * The tax coupon information for cabin and air equipment.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\TaxCouponInfoAType
-     * $taxCouponInfo
+     * @property TaxCouponInfoAType $taxCouponInfo
      */
     private $taxCouponInfo = null;
 
     /**
      * The tax/fee charge for this coupon.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\AirTaxType[] $tax
+     * @property AirTaxType[] $tax
      */
     private $tax = null;
 
@@ -35,9 +37,7 @@ class CouponNumberAType
      * Unticketed information, including city airport code and arrival/ departure
      * dates.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\UnticketedPointInfoAType[]
-     * $unticketedPointInfo
+     * @property UnticketedPointInfoAType[] $unticketedPointInfo
      */
     private $unticketedPointInfo = null;
 
@@ -86,14 +86,10 @@ class CouponNumberAType
      *
      * The tax coupon information for cabin and air equipment.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\TaxCouponInfoAType
-     * $taxCouponInfo
+     * @param TaxCouponInfoAType $taxCouponInfo
      * @return self
      */
-    public function setTaxCouponInfo(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\TaxCouponInfoAType $taxCouponInfo
-    ) {
+    public function setTaxCouponInfo(TaxCouponInfoAType $taxCouponInfo) {
         $this->taxCouponInfo = $taxCouponInfo;
 
         return $this;
@@ -105,9 +101,9 @@ class CouponNumberAType
      * The tax/fee charge for this coupon.
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType $tax
+     * @param AirTaxType $tax
      */
-    public function addToTax(\Davispeixoto\OpenTravelAlliance\AirTaxType $tax)
+    public function addToTax(AirTaxType $tax)
     {
         $this->tax[] = $tax;
 
@@ -124,7 +120,9 @@ class CouponNumberAType
      */
     public function issetTax($index)
     {
-        return isset($this->tax[$index]);
+        if (isset($index)) {
+            return isset($this->tax[$index]);
+        }
     }
 
     /**
@@ -137,7 +135,9 @@ class CouponNumberAType
      */
     public function unsetTax($index)
     {
-        unset($this->tax[$index]);
+        if (isset($index)) {
+            unset($this->tax[$index]);
+        }
     }
 
     /**
@@ -145,7 +145,7 @@ class CouponNumberAType
      *
      * The tax/fee charge for this coupon.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\AirTaxType[]
+     * @return AirTaxType[]
      */
     public function getTax()
     {
@@ -157,7 +157,7 @@ class CouponNumberAType
      *
      * The tax/fee charge for this coupon.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType[] $tax
+     * @param AirTaxType[] $tax
      * @return self
      */
     public function setTax(array $tax)
@@ -173,14 +173,10 @@ class CouponNumberAType
      * Unticketed information, including city airport code and arrival/ departure
      * dates.
      *
+     * @param UnticketedPointInfoAType $unticketedPointInfo
      * @return self
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\UnticketedPointInfoAType
-     * $unticketedPointInfo
      */
-    public function addToUnticketedPointInfo(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\UnticketedPointInfoAType $unticketedPointInfo
-    ) {
+    public function addToUnticketedPointInfo(UnticketedPointInfoAType $unticketedPointInfo) {
         $this->unticketedPointInfo[] = $unticketedPointInfo;
 
         return $this;
@@ -197,7 +193,9 @@ class CouponNumberAType
      */
     public function issetUnticketedPointInfo($index)
     {
-        return isset($this->unticketedPointInfo[$index]);
+        if (isset($index)) {
+            return isset($this->unticketedPointInfo[$index]);
+        }
     }
 
     /**
@@ -211,7 +209,9 @@ class CouponNumberAType
      */
     public function unsetUnticketedPointInfo($index)
     {
-        unset($this->unticketedPointInfo[$index]);
+        if (isset($index)) {
+            unset($this->unticketedPointInfo[$index]);
+        }
     }
 
     /**
@@ -234,9 +234,7 @@ class CouponNumberAType
      * Unticketed information, including city airport code and arrival/ departure
      * dates.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType\UnticketedPointInfoAType[]
-     * $unticketedPointInfo
+     * @param UnticketedPointInfoAType[] $unticketedPointInfo
      * @return self
      */
     public function setUnticketedPointInfo(array $unticketedPointInfo)

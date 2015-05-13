@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType;
 
+use Davispeixoto\OpenTravelAlliance\AirTaxType;
+use Davispeixoto\OpenTravelAlliance\EMDType\ExchResidualFareComponentAType\TotalAmountAType;
 use Davispeixoto\OpenTravelAlliance\FareComponentType;
 
 /**
@@ -13,16 +15,14 @@ class ExchResidualFareComponentAType extends FareComponentType
     /**
      * The tax, fee, or charge amount information.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\AirTaxType[] $taxes
+     * @property AirTaxType[] $taxes
      */
     private $taxes = null;
 
     /**
      * The total residual value, including applicable tax, fees and charges.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\ExchResidualFareComponentAType\TotalAmountAType
-     * $totalAmount
+     * @property TotalAmountAType $totalAmount
      */
     private $totalAmount = null;
 
@@ -32,9 +32,9 @@ class ExchResidualFareComponentAType extends FareComponentType
      * The tax, fee, or charge amount information.
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType $tax
+     * @param AirTaxType $tax
      */
-    public function addToTaxes(\Davispeixoto\OpenTravelAlliance\AirTaxType $tax)
+    public function addToTaxes(AirTaxType $tax)
     {
         $this->taxes[] = $tax;
 
@@ -51,7 +51,9 @@ class ExchResidualFareComponentAType extends FareComponentType
      */
     public function issetTaxes($index)
     {
-        return isset($this->taxes[$index]);
+        if (isset($index)) {
+            return isset($this->taxes[$index]);
+        }
     }
 
     /**
@@ -64,7 +66,9 @@ class ExchResidualFareComponentAType extends FareComponentType
      */
     public function unsetTaxes($index)
     {
-        unset($this->taxes[$index]);
+        if (!empty($this)) {
+            unset($this->taxes[$index]);
+        }
     }
 
     /**
@@ -72,7 +76,7 @@ class ExchResidualFareComponentAType extends FareComponentType
      *
      * The tax, fee, or charge amount information.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\AirTaxType[]
+     * @return AirTaxType[]
      */
     public function getTaxes()
     {
@@ -84,7 +88,7 @@ class ExchResidualFareComponentAType extends FareComponentType
      *
      * The tax, fee, or charge amount information.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType[] $taxes
+     * @param AirTaxType[] $taxes
      * @return self
      */
     public function setTaxes(array $taxes)
@@ -112,14 +116,10 @@ class ExchResidualFareComponentAType extends FareComponentType
      *
      * The total residual value, including applicable tax, fees and charges.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\ExchResidualFareComponentAType\TotalAmountAType
-     * $totalAmount
+     * @param TotalAmountAType $totalAmount
      * @return self
      */
-    public function setTotalAmount(
-        \Davispeixoto\OpenTravelAlliance\EMDType\ExchResidualFareComponentAType\TotalAmountAType $totalAmount
-    ) {
+    public function setTotalAmount(TotalAmountAType $totalAmount) {
         $this->totalAmount = $totalAmount;
 
         return $this;

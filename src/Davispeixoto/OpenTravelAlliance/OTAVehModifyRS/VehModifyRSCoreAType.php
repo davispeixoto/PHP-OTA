@@ -43,14 +43,11 @@ class VehModifyRSCoreAType extends VehicleModifyRSCoreType
      * enumerations in TransactionStatusType or an UpperCaseAlphaLength1to2 such as the
      * IATA status code.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\OTAVehModifyRS\VehModifyRSCoreAType\ModifyStatusAType
-     * $modifyStatus
+     * @param VehModifyRSCoreAType $modifyStatus
      * @return self
      */
-    public function setModifyStatus(
-        \Davispeixoto\OpenTravelAlliance\OTAVehModifyRS\VehModifyRSCoreAType\ModifyStatusAType $modifyStatus
-    ) {
+    public function setModifyStatus(VehModifyRSCoreAType $modifyStatus)
+    {
         $this->modifyStatus = $modifyStatus;
 
         return $this;

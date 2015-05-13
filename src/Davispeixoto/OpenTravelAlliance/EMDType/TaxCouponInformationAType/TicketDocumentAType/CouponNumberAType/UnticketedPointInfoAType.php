@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType;
 
+use Davispeixoto\OpenTravelAlliance\DateOrDateTimeType;
+
 /**
  * Class representing UnticketedPointInfoAType
  */
@@ -19,14 +21,14 @@ class UnticketedPointInfoAType
     /**
      * The date and time of arrival in GMT at the unticketed point.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $arrivalDate
+     * @property DateOrDateTimeType $arrivalDate
      */
     private $arrivalDate = null;
 
     /**
      * The date and time of depature in GMT from the unticketed point.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $departureDate
+     * @property DateOrDateTimeType $departureDate
      */
     private $departureDate = null;
 
@@ -72,7 +74,7 @@ class UnticketedPointInfoAType
      *
      * The date and time of arrival in GMT at the unticketed point.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType
+     * @return DateOrDateTimeType
      */
     public function getArrivalDate()
     {
@@ -84,10 +86,10 @@ class UnticketedPointInfoAType
      *
      * The date and time of arrival in GMT at the unticketed point.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $arrivalDate
+     * @param DateOrDateTimeType $arrivalDate
      * @return self
      */
-    public function setArrivalDate(\Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $arrivalDate)
+    public function setArrivalDate(DateOrDateTimeType $arrivalDate)
     {
         $this->arrivalDate = $arrivalDate;
 
@@ -99,7 +101,7 @@ class UnticketedPointInfoAType
      *
      * The date and time of depature in GMT from the unticketed point.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType
+     * @return DateOrDateTimeType
      */
     public function getDepartureDate()
     {
@@ -111,10 +113,10 @@ class UnticketedPointInfoAType
      *
      * The date and time of depature in GMT from the unticketed point.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $departureDate
+     * @param DateOrDateTimeType $departureDate
      * @return self
      */
-    public function setDepartureDate(\Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $departureDate)
+    public function setDepartureDate(DateOrDateTimeType $departureDate)
     {
         $this->departureDate = $departureDate;
 

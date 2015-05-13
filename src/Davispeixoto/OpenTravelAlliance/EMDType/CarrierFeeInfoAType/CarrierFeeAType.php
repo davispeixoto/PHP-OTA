@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType;
 
+use Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType\FeeAmountAType;
+
 /**
  * Class representing CarrierFeeAType
  */
@@ -103,9 +105,7 @@ class CarrierFeeAType
      * The type of fee being imposed by a carrier, the amount and other related
      * information.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType\FeeAmountAType[]
-     * $feeAmount
+     * @property FeeAmountAType[] $feeAmount
      */
     private $feeAmount = null;
 
@@ -454,13 +454,9 @@ class CarrierFeeAType
      * information.
      *
      * @return self
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType\FeeAmountAType
-     * $feeAmount
+     * @param FeeAmountAType $feeAmount
      */
-    public function addToFeeAmount(
-        \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType\FeeAmountAType $feeAmount
-    ) {
+    public function addToFeeAmount(FeeAmountAType $feeAmount) {
         $this->feeAmount[] = $feeAmount;
 
         return $this;
@@ -477,7 +473,9 @@ class CarrierFeeAType
      */
     public function issetFeeAmount($index)
     {
-        return isset($this->feeAmount[$index]);
+        if (isset($index)) {
+            return isset($this->feeAmount[$index]);
+        }
     }
 
     /**
@@ -491,7 +489,9 @@ class CarrierFeeAType
      */
     public function unsetFeeAmount($index)
     {
-        unset($this->feeAmount[$index]);
+        if (isset($index)) {
+            unset($this->feeAmount[$index]);
+        }
     }
 
     /**
@@ -514,14 +514,12 @@ class CarrierFeeAType
      * The type of fee being imposed by a carrier, the amount and other related
      * information.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType\FeeAmountAType[]
-     * $feeAmount
+     * @param FeeAmountAType $feeAmount
      * @return self
      */
-    public function setFeeAmount(array $feeAmount)
+    public function setFeeAmount(FeeAmountAType $feeAmount)
     {
-        $this->feeAmount = $feeAmount;
+        $this->feeAmount[] = $feeAmount;
 
         return $this;
     }

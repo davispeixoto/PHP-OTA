@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType;
 
+use Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType;
+
 /**
  * Class representing TaxCouponInformationAType
  */
@@ -26,9 +28,7 @@ class TaxCouponInformationAType
     /**
      * The ticket/document number to which the tax coupon data applies.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType[]
-     * $ticketDocument
+     * @property TicketDocumentAType[] $ticketDocument
      */
     private $ticketDocument = null;
 
@@ -94,13 +94,10 @@ class TaxCouponInformationAType
      * The ticket/document number to which the tax coupon data applies.
      *
      * @return self
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType
-     * $ticketDocument
+     * @param TicketDocumentAType $ticketDocument
      */
-    public function addToTicketDocument(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType $ticketDocument
-    ) {
+    public function addToTicketDocument(TicketDocumentAType $ticketDocument)
+    {
         $this->ticketDocument[] = $ticketDocument;
 
         return $this;
@@ -116,7 +113,9 @@ class TaxCouponInformationAType
      */
     public function issetTicketDocument($index)
     {
-        return isset($this->ticketDocument[$index]);
+        if (isset($index)) {
+            return isset($this->ticketDocument[$index]);
+        }
     }
 
     /**
@@ -129,7 +128,9 @@ class TaxCouponInformationAType
      */
     public function unsetTicketDocument($index)
     {
-        unset($this->ticketDocument[$index]);
+        if (isset($index)) {
+            unset($this->ticketDocument[$index]);
+        }
     }
 
     /**
@@ -150,14 +151,12 @@ class TaxCouponInformationAType
      *
      * The ticket/document number to which the tax coupon data applies.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType[]
-     * $ticketDocument
+     * @param TicketDocumentAType $ticketDocument
      * @return self
      */
-    public function setTicketDocument(array $ticketDocument)
+    public function setTicketDocument(TicketDocumentAType $ticketDocument)
     {
-        $this->ticketDocument = $ticketDocument;
+        $this->ticketDocument[] = $ticketDocument;
 
         return $this;
     }

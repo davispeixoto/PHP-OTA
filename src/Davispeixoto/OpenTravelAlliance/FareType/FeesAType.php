@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\FareType;
 
+use Davispeixoto\OpenTravelAlliance\AirFeeType;
+
 /**
  * Class representing FeesAType
  */
@@ -35,7 +37,7 @@ class FeesAType
     /**
      * Any additional fee incurred by the passenger but not shown on the ticket.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\AirFeeType[] $fee
+     * @property AirFeeType[] $fee
      */
     private $fee = null;
 
@@ -132,9 +134,9 @@ class FeesAType
      * Any additional fee incurred by the passenger but not shown on the ticket.
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\AirFeeType $fee
+     * @param AirFeeType $fee
      */
-    public function addToFee(\Davispeixoto\OpenTravelAlliance\AirFeeType $fee)
+    public function addToFee(AirFeeType $fee)
     {
         $this->fee[] = $fee;
 
@@ -151,7 +153,9 @@ class FeesAType
      */
     public function issetFee($index)
     {
-        return isset($this->fee[$index]);
+        if (isset($index)) {
+            return isset($this->fee[$index]);
+        }
     }
 
     /**
@@ -164,7 +168,9 @@ class FeesAType
      */
     public function unsetFee($index)
     {
-        unset($this->fee[$index]);
+        if (isset($index)) {
+            unset($this->fee[$index]);
+        }
     }
 
     /**
@@ -172,7 +178,7 @@ class FeesAType
      *
      * Any additional fee incurred by the passenger but not shown on the ticket.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\AirFeeType[]
+     * @return AirFeeType[]
      */
     public function getFee()
     {
@@ -184,7 +190,7 @@ class FeesAType
      *
      * Any additional fee incurred by the passenger but not shown on the ticket.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\AirFeeType[] $fee
+     * @param AirFeeType[] $fee
      * @return self
      */
     public function setFee(array $fee)

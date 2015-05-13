@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\FareType;
 
+use Davispeixoto\OpenTravelAlliance\AirTaxType;
+
 /**
  * Class representing TaxesAType
  */
@@ -18,7 +20,7 @@ class TaxesAType
     /**
      * Any individual tax applied to the fare
      *
-     * @property \Davispeixoto\OpenTravelAlliance\AirTaxType[] $tax
+     * @property AirTaxType[] $tax
      */
     private $tax = null;
 
@@ -55,9 +57,9 @@ class TaxesAType
      * Any individual tax applied to the fare
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType $tax
+     * @param AirTaxType $tax
      */
-    public function addToTax(\Davispeixoto\OpenTravelAlliance\AirTaxType $tax)
+    public function addToTax(AirTaxType $tax)
     {
         $this->tax[] = $tax;
 
@@ -74,7 +76,9 @@ class TaxesAType
      */
     public function issetTax($index)
     {
-        return isset($this->tax[$index]);
+        if (isset($index)) {
+            return isset($this->tax[$index]);
+        }
     }
 
     /**
@@ -87,7 +91,9 @@ class TaxesAType
      */
     public function unsetTax($index)
     {
-        unset($this->tax[$index]);
+        if (isset($index)) {
+            unset($this->tax[$index]);
+        }
     }
 
     /**
@@ -95,7 +101,7 @@ class TaxesAType
      *
      * Any individual tax applied to the fare
      *
-     * @return \Davispeixoto\OpenTravelAlliance\AirTaxType[]
+     * @return AirTaxType[]
      */
     public function getTax()
     {
@@ -107,7 +113,7 @@ class TaxesAType
      *
      * Any individual tax applied to the fare
      *
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType[] $tax
+     * @param AirTaxType[] $tax
      * @return self
      */
     public function setTax(array $tax)

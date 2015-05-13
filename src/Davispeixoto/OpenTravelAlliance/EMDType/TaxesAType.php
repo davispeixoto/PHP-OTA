@@ -5,13 +5,16 @@ namespace Davispeixoto\OpenTravelAlliance\EMDType;
 /**
  * Class representing TaxesAType
  */
+
+use Davispeixoto\OpenTravelAlliance\EMDType\TaxesAType\TaxAType;
+
 class TaxesAType
 {
 
     /**
      * The tax applicable to the ticket/document.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\EMDType\TaxesAType\TaxAType[] $tax
+     * @property TaxAType[] $tax
      */
     private $tax = null;
 
@@ -21,9 +24,9 @@ class TaxesAType
      * The tax applicable to the ticket/document.
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\EMDType\TaxesAType\TaxAType $tax
+     * @param TaxAType $tax
      */
-    public function addToTax(\Davispeixoto\OpenTravelAlliance\EMDType\TaxesAType\TaxAType $tax)
+    public function addToTax(TaxAType $tax)
     {
         $this->tax[] = $tax;
 
@@ -40,7 +43,9 @@ class TaxesAType
      */
     public function issetTax($index)
     {
-        return isset($this->tax[$index]);
+        if (isset($index)) {
+            return isset($this->tax[$index]);
+        }
     }
 
     /**
@@ -53,7 +58,9 @@ class TaxesAType
      */
     public function unsetTax($index)
     {
-        unset($this->tax[$index]);
+        if (isset($index)) {
+            unset($this->tax[$index]);
+        }
     }
 
     /**

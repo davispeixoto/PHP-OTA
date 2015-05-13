@@ -9,6 +9,7 @@ namespace Davispeixoto\OpenTravelAlliance;
  * an index identifying which guests occupy this room
  * XSD Type: ResGuestRPHsType
  */
+
 class ResGuestRPHsType extends ListOfRPHType
 {
 

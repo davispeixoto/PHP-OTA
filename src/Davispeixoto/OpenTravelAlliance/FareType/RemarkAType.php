@@ -9,9 +9,9 @@ class RemarkAType
 {
 
     /**
-     * @property string $__value
+     * @property string $theValue
      */
-    private $__value = null;
+    private $theValue = null;
 
     /**
      * Construct
@@ -31,11 +31,12 @@ class RemarkAType
      */
     public function value()
     {
-        if ($args = func_get_args()) {
-            $this->__value = $args[0];
+        $args = func_get_args();
+        if (!empty($args)) {
+            $this->theValue = $args[0];
         }
 
-        return $this->__value;
+        return $this->theValue;
     }
 
     /**
@@ -45,7 +46,7 @@ class RemarkAType
      */
     public function __toString()
     {
-        return strval($this->__value);
+        return strval($this->theValue);
     }
 
 

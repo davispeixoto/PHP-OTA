@@ -141,7 +141,9 @@ class FeeAmountAType
      */
     public function issetApplicationCode($index)
     {
-        return isset($this->applicationCode[$index]);
+        if (isset($index)) {
+            return isset($this->applicationCode[$index]);
+        }
     }
 
     /**
@@ -155,7 +157,9 @@ class FeeAmountAType
      */
     public function unsetApplicationCode($index)
     {
-        unset($this->applicationCode[$index]);
+        if (isset($index)) {
+            unset($this->applicationCode[$index]);
+        }
     }
 
     /**
@@ -180,9 +184,9 @@ class FeeAmountAType
      * @param string $applicationCode
      * @return self
      */
-    public function setApplicationCode(array $applicationCode)
+    public function setApplicationCode($applicationCode)
     {
-        $this->applicationCode = $applicationCode;
+        $this->applicationCode[] = $applicationCode;
 
         return $this;
     }

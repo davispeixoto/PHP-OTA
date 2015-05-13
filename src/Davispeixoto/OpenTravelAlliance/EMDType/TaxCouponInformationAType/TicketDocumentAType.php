@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType;
 
+use Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType;
+
 /**
  * Class representing TicketDocumentAType
  */
@@ -57,12 +59,10 @@ class TicketDocumentAType
      * The applicable coupon number.
      *
      * @return self
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType
-     * $couponNumber
+     * @param CouponNumberAType $couponNumber
      */
     public function addToCouponNumber(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType $couponNumber
+        CouponNumberAType $couponNumber
     ) {
         $this->couponNumber[] = $couponNumber;
 
@@ -79,7 +79,9 @@ class TicketDocumentAType
      */
     public function issetCouponNumber($index)
     {
-        return isset($this->couponNumber[$index]);
+        if (isset($index)) {
+            return isset($this->couponNumber[$index]);
+        }
     }
 
     /**
@@ -92,7 +94,9 @@ class TicketDocumentAType
      */
     public function unsetCouponNumber($index)
     {
-        unset($this->couponNumber[$index]);
+        if (isset($index)) {
+            unset($this->couponNumber[$index]);
+        }
     }
 
     /**
@@ -113,9 +117,7 @@ class TicketDocumentAType
      *
      * The applicable coupon number.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TaxCouponInformationAType\TicketDocumentAType\CouponNumberAType[]
-     * $couponNumber
+     * @param CouponNumberAType[] $couponNumber
      * @return self
      */
     public function setCouponNumber(array $couponNumber)

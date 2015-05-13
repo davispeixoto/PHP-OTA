@@ -314,7 +314,9 @@ class CustLoyaltyAType
      */
     public function issetVendorCode($index)
     {
-        return isset($this->vendorCode[$index]);
+        if (isset($index)) {
+            return isset($this->vendorCode[$index]);
+        }
     }
 
     /**
@@ -328,7 +330,9 @@ class CustLoyaltyAType
      */
     public function unsetVendorCode($index)
     {
-        unset($this->vendorCode[$index]);
+        if (isset($index)) {
+            unset($this->vendorCode[$index]);
+        }
     }
 
     /**
@@ -353,9 +357,9 @@ class CustLoyaltyAType
      * @param string $vendorCode
      * @return self
      */
-    public function setVendorCode(array $vendorCode)
+    public function setVendorCode($vendorCode)
     {
-        $this->vendorCode = $vendorCode;
+        $this->vendorCode[] = $vendorCode;
 
         return $this;
     }

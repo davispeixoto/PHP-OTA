@@ -2,6 +2,10 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType;
 
+use Davispeixoto\OpenTravelAlliance\AirTaxType;
+use Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType;
+use Davispeixoto\OpenTravelAlliance\PaymentDetailType;
+
 /**
  * Class representing CarrierFeeInfoAType
  */
@@ -11,7 +15,7 @@ class CarrierFeeInfoAType
     /**
      * Form of payment information.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\PaymentDetailType $paymentDetail
+     * @property PaymentDetailType $paymentDetail
      */
     private $paymentDetail = null;
 
@@ -19,16 +23,14 @@ class CarrierFeeInfoAType
      * Used to specify if the carrier fee is related to the booking, ticketing, or
      * service and associated information.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType[]
-     * $carrierFee
+     * @property CarrierFeeAType[] $carrierFee
      */
     private $carrierFee = null;
 
     /**
      * A collection of taxes applicable to the carrier fee.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\AirTaxType[] $taxes
+     * @property AirTaxType[] $taxes
      */
     private $taxes = null;
 
@@ -37,7 +39,7 @@ class CarrierFeeInfoAType
      *
      * Form of payment information.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\PaymentDetailType
+     * @return PaymentDetailType
      */
     public function getPaymentDetail()
     {
@@ -49,10 +51,10 @@ class CarrierFeeInfoAType
      *
      * Form of payment information.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\PaymentDetailType $paymentDetail
+     * @param PaymentDetailType $paymentDetail
      * @return self
      */
-    public function setPaymentDetail(\Davispeixoto\OpenTravelAlliance\PaymentDetailType $paymentDetail)
+    public function setPaymentDetail(PaymentDetailType $paymentDetail)
     {
         $this->paymentDetail = $paymentDetail;
 
@@ -66,15 +68,10 @@ class CarrierFeeInfoAType
      * service and associated information.
      *
      * @return self
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType
-     * $carrierFee
+     * @param CarrierFeeAType $carrierFee
      */
-    public function addToCarrierFee(
-        \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType $carrierFee
-    ) {
+    public function addToCarrierFee(CarrierFeeAType $carrierFee) {
         $this->carrierFee[] = $carrierFee;
-
         return $this;
     }
 
@@ -89,7 +86,9 @@ class CarrierFeeInfoAType
      */
     public function issetCarrierFee($index)
     {
-        return isset($this->carrierFee[$index]);
+        if (isset($index)) {
+            return isset($this->carrierFee[$index]);
+        }
     }
 
     /**
@@ -103,7 +102,9 @@ class CarrierFeeInfoAType
      */
     public function unsetCarrierFee($index)
     {
-        unset($this->carrierFee[$index]);
+        if (isset($index)) {
+            unset($this->carrierFee[$index]);
+        }
     }
 
     /**
@@ -126,9 +127,7 @@ class CarrierFeeInfoAType
      * Used to specify if the carrier fee is related to the booking, ticketing, or
      * service and associated information.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\CarrierFeeInfoAType\CarrierFeeAType[]
-     * $carrierFee
+     * @param CarrierFeeAType[] $carrierFee
      * @return self
      */
     public function setCarrierFee(array $carrierFee)
@@ -144,9 +143,9 @@ class CarrierFeeInfoAType
      * A collection of taxes applicable to the carrier fee.
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType $tax
+     * @param AirTaxType $tax
      */
-    public function addToTaxes(\Davispeixoto\OpenTravelAlliance\AirTaxType $tax)
+    public function addToTaxes(AirTaxType $tax)
     {
         $this->taxes[] = $tax;
 
@@ -163,7 +162,9 @@ class CarrierFeeInfoAType
      */
     public function issetTaxes($index)
     {
-        return isset($this->taxes[$index]);
+        if (isset($index)) {
+            return isset($this->taxes[$index]);
+        }
     }
 
     /**
@@ -176,7 +177,9 @@ class CarrierFeeInfoAType
      */
     public function unsetTaxes($index)
     {
-        unset($this->taxes[$index]);
+        if (isset($index)) {
+            unset($this->taxes[$index]);
+        }
     }
 
     /**
@@ -184,7 +187,7 @@ class CarrierFeeInfoAType
      *
      * A collection of taxes applicable to the carrier fee.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\AirTaxType[]
+     * @return AirTaxType[]
      */
     public function getTaxes()
     {
@@ -196,7 +199,7 @@ class CarrierFeeInfoAType
      *
      * A collection of taxes applicable to the carrier fee.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\AirTaxType[] $taxes
+     * @param AirTaxType[] $taxes
      * @return self
      */
     public function setTaxes(array $taxes)

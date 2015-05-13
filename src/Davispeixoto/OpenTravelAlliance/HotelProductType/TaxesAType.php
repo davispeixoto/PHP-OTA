@@ -2,6 +2,8 @@
 
 namespace Davispeixoto\OpenTravelAlliance\HotelProductType;
 
+use Davispeixoto\OpenTravelAlliance\TaxType;
+
 /**
  * Class representing TaxesAType
  */
@@ -9,7 +11,7 @@ class TaxesAType
 {
 
     /**
-     * @property \Davispeixoto\OpenTravelAlliance\TaxType[] $tax
+     * @property TaxType[] $tax
      */
     private $tax = null;
 
@@ -17,9 +19,9 @@ class TaxesAType
      * Adds as tax
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\TaxType $tax
+     * @param TaxType $tax
      */
-    public function addToTax(\Davispeixoto\OpenTravelAlliance\TaxType $tax)
+    public function addToTax(TaxType $tax)
     {
         $this->tax[] = $tax;
 
@@ -51,7 +53,7 @@ class TaxesAType
     /**
      * Gets as tax
      *
-     * @return \Davispeixoto\OpenTravelAlliance\TaxType[]
+     * @return TaxType[]
      */
     public function getTax()
     {
@@ -61,7 +63,7 @@ class TaxesAType
     /**
      * Sets a new tax
      *
-     * @param \Davispeixoto\OpenTravelAlliance\TaxType[] $tax
+     * @param TaxType[] $tax
      * @return self
      */
     public function setTax(array $tax)

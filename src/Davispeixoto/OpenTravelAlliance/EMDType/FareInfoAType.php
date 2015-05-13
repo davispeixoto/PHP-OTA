@@ -3,6 +3,7 @@
 namespace Davispeixoto\OpenTravelAlliance\EMDType;
 
 use Davispeixoto\OpenTravelAlliance\ETFareInfoType;
+use Davispeixoto\OpenTravelAlliance\VoluntaryChangesType;
 
 /**
  * Class representing FareInfoAType
@@ -107,7 +108,7 @@ class FareInfoAType extends ETFareInfoType
     /**
      * Non-refundable, no value, penalty amounts.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\VoluntaryChangesType[] $penaltyAmount
+     * @property VoluntaryChangesType[] $penaltyAmount
      */
     private $penaltyAmount = null;
 
@@ -474,9 +475,9 @@ class FareInfoAType extends ETFareInfoType
      * Non-refundable, no value, penalty amounts.
      *
      * @return self
-     * @param \Davispeixoto\OpenTravelAlliance\VoluntaryChangesType $penaltyAmount
+     * @param VoluntaryChangesType $penaltyAmount
      */
-    public function addToPenaltyAmount(\Davispeixoto\OpenTravelAlliance\VoluntaryChangesType $penaltyAmount)
+    public function addToPenaltyAmount(VoluntaryChangesType $penaltyAmount)
     {
         $this->penaltyAmount[] = $penaltyAmount;
 
@@ -493,7 +494,9 @@ class FareInfoAType extends ETFareInfoType
      */
     public function issetPenaltyAmount($index)
     {
-        return isset($this->penaltyAmount[$index]);
+        if (isset($index)) {
+            return isset($this->penaltyAmount[$index]);
+        }
     }
 
     /**
@@ -506,7 +509,9 @@ class FareInfoAType extends ETFareInfoType
      */
     public function unsetPenaltyAmount($index)
     {
-        unset($this->penaltyAmount[$index]);
+        if (isset($index)) {
+            unset($this->penaltyAmount[$index]);
+        }
     }
 
     /**
@@ -514,7 +519,7 @@ class FareInfoAType extends ETFareInfoType
      *
      * Non-refundable, no value, penalty amounts.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\VoluntaryChangesType[]
+     * @return VoluntaryChangesType[]
      */
     public function getPenaltyAmount()
     {
@@ -526,7 +531,7 @@ class FareInfoAType extends ETFareInfoType
      *
      * Non-refundable, no value, penalty amounts.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\VoluntaryChangesType[] $penaltyAmount
+     * @param VoluntaryChangesType[] $penaltyAmount
      * @return self
      */
     public function setPenaltyAmount(array $penaltyAmount)

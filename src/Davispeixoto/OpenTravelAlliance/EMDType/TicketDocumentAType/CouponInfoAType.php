@@ -2,6 +2,15 @@
 
 namespace Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType;
 
+use Davispeixoto\OpenTravelAlliance\DateOrDateTimeType;
+use Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType;
+use Davispeixoto\OpenTravelAlliance\DurationType;
+use Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ExcessBaggageAType;
+use Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\FiledFeeInfoAType;
+use Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\PresentInfoAType;
+use Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ReasonForIssuanceAType;
+use Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ValidatingAirlineAType;
+
 /**
  * Class representing CouponInfoAType
  */
@@ -40,7 +49,7 @@ class CouponInfoAType
     /**
      * The starting value of the time span.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType $start
+     * @property DateOrTimeOrDateTimeType $start
      */
     private $start = null;
 
@@ -48,14 +57,14 @@ class CouponInfoAType
      * The duration datatype represents a combination of year, month, day and time
      * values representing a single duration of time, encoded as a single string.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\DurationType $duration
+     * @property DurationType $duration
      */
     private $duration = null;
 
     /**
      * The ending value of the time span.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType $end
+     * @property DateOrTimeOrDateTimeType $end
      */
     private $end = null;
 
@@ -169,7 +178,7 @@ class CouponInfoAType
     /**
      * The scheduled date of service for this coupon of an EMD.
      *
-     * @property \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $dateOfService
+     * @property DateOrDateTimeType $dateOfService
      */
     private $dateOfService = null;
 
@@ -197,45 +206,35 @@ class CouponInfoAType
     /**
      * Excess baggage information.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ExcessBaggageAType
-     * $excessBaggage
+     * @property ExcessBaggageAType $excessBaggage
      */
     private $excessBaggage = null;
 
     /**
      * The present to and at information.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\PresentInfoAType
-     * $presentInfo
+     * @property PresentInfoAType $presentInfo
      */
     private $presentInfo = null;
 
     /**
      * The reason for issuance information.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ReasonForIssuanceAType
-     * $reasonForIssuance
+     * @property ReasonForIssuanceAType $reasonForIssuance
      */
     private $reasonForIssuance = null;
 
     /**
      * The validating airline for this EMD coupon.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ValidatingAirlineAType
-     * $validatingAirline
+     * @property ValidatingAirlineAType $validatingAirline
      */
     private $validatingAirline = null;
 
     /**
      * Filed fee information.
      *
-     * @property
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\FiledFeeInfoAType
-     * $filedFeeInfo
+     * @property FiledFeeInfoAType $filedFeeInfo
      */
     private $filedFeeInfo = null;
 
@@ -354,7 +353,7 @@ class CouponInfoAType
      *
      * The starting value of the time span.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType
+     * @return DateOrTimeOrDateTimeType
      */
     public function getStart()
     {
@@ -366,10 +365,10 @@ class CouponInfoAType
      *
      * The starting value of the time span.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType $start
+     * @param DateOrTimeOrDateTimeType $start
      * @return self
      */
-    public function setStart(\Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType $start)
+    public function setStart(DateOrTimeOrDateTimeType $start)
     {
         $this->start = $start;
 
@@ -382,7 +381,7 @@ class CouponInfoAType
      * The duration datatype represents a combination of year, month, day and time
      * values representing a single duration of time, encoded as a single string.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\DurationType
+     * @return DurationType
      */
     public function getDuration()
     {
@@ -395,10 +394,10 @@ class CouponInfoAType
      * The duration datatype represents a combination of year, month, day and time
      * values representing a single duration of time, encoded as a single string.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\DurationType $duration
+     * @param DurationType $duration
      * @return self
      */
-    public function setDuration(\Davispeixoto\OpenTravelAlliance\DurationType $duration)
+    public function setDuration(DurationType $duration)
     {
         $this->duration = $duration;
 
@@ -410,7 +409,7 @@ class CouponInfoAType
      *
      * The ending value of the time span.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType
+     * @return DateOrTimeOrDateTimeType
      */
     public function getEnd()
     {
@@ -422,10 +421,10 @@ class CouponInfoAType
      *
      * The ending value of the time span.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType $end
+     * @param DateOrTimeOrDateTimeType $end
      * @return self
      */
-    public function setEnd(\Davispeixoto\OpenTravelAlliance\DateOrTimeOrDateTimeType $end)
+    public function setEnd(DateOrTimeOrDateTimeType $end)
     {
         $this->end = $end;
 
@@ -833,7 +832,7 @@ class CouponInfoAType
      *
      * The scheduled date of service for this coupon of an EMD.
      *
-     * @return \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType
+     * @return DateOrDateTimeType
      */
     public function getDateOfService()
     {
@@ -845,10 +844,10 @@ class CouponInfoAType
      *
      * The scheduled date of service for this coupon of an EMD.
      *
-     * @param \Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $dateOfService
+     * @param DateOrDateTimeType $dateOfService
      * @return self
      */
-    public function setDateOfService(\Davispeixoto\OpenTravelAlliance\DateOrDateTimeType $dateOfService)
+    public function setDateOfService(DateOrDateTimeType $dateOfService)
     {
         $this->dateOfService = $dateOfService;
 
@@ -954,14 +953,11 @@ class CouponInfoAType
      *
      * Excess baggage information.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ExcessBaggageAType
-     * $excessBaggage
+     * @param ExcessBaggageAType $excessBaggage
      * @return self
      */
-    public function setExcessBaggage(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ExcessBaggageAType $excessBaggage
-    ) {
+    public function setExcessBaggage(ExcessBaggageAType $excessBaggage)
+    {
         $this->excessBaggage = $excessBaggage;
 
         return $this;
@@ -985,14 +981,11 @@ class CouponInfoAType
      *
      * The present to and at information.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\PresentInfoAType
-     * $presentInfo
+     * @param PresentInfoAType $presentInfo
      * @return self
      */
-    public function setPresentInfo(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\PresentInfoAType $presentInfo
-    ) {
+    public function setPresentInfo(PresentInfoAType $presentInfo)
+    {
         $this->presentInfo = $presentInfo;
 
         return $this;
@@ -1016,14 +1009,11 @@ class CouponInfoAType
      *
      * The reason for issuance information.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ReasonForIssuanceAType
-     * $reasonForIssuance
+     * @param ReasonForIssuanceAType $reasonForIssuance
      * @return self
      */
-    public function setReasonForIssuance(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ReasonForIssuanceAType $reasonForIssuance
-    ) {
+    public function setReasonForIssuance(ReasonForIssuanceAType $reasonForIssuance)
+    {
         $this->reasonForIssuance = $reasonForIssuance;
 
         return $this;
@@ -1047,14 +1037,11 @@ class CouponInfoAType
      *
      * The validating airline for this EMD coupon.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ValidatingAirlineAType
-     * $validatingAirline
+     * @param ValidatingAirlineAType $validatingAirline
      * @return self
      */
-    public function setValidatingAirline(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\ValidatingAirlineAType $validatingAirline
-    ) {
+    public function setValidatingAirline(ValidatingAirlineAType $validatingAirline)
+    {
         $this->validatingAirline = $validatingAirline;
 
         return $this;
@@ -1078,14 +1065,11 @@ class CouponInfoAType
      *
      * Filed fee information.
      *
-     * @param
-     * \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\FiledFeeInfoAType
-     * $filedFeeInfo
+     * @param FiledFeeInfoAType $filedFeeInfo
      * @return self
      */
-    public function setFiledFeeInfo(
-        \Davispeixoto\OpenTravelAlliance\EMDType\TicketDocumentAType\CouponInfoAType\FiledFeeInfoAType $filedFeeInfo
-    ) {
+    public function setFiledFeeInfo(FiledFeeInfoAType $filedFeeInfo)
+    {
         $this->filedFeeInfo = $filedFeeInfo;
 
         return $this;

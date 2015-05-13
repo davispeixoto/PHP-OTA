@@ -1,4 +1,4 @@
-<?php namespace Davispeixoto\Calendar\Exceptions;
+<?php namespace Davispeixoto\OpenTravelAlliance\Exceptions;
 
     /**
      * Class OTACoreException
