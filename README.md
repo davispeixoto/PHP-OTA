@@ -10,6 +10,18 @@ A PHP implementation of [OTA (OpenTravel Alliance)](http://www.opentravel.org/De
 [![Build Status](https://travis-ci.org/davispeixoto/PHP-OTA.svg?branch=master)](https://travis-ci.org/davispeixoto/PHP-OTA)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d0f68366-00e9-4bb5-8310-a50af4e542a2/small.png)](https://insight.sensiolabs.com/projects/d0f68366-00e9-4bb5-8310-a50af4e542a2)
 
+## Word of Warning
+
+I've attempted to create this project using a xsd2php converter. However, the quality of generated code is somewhat 
+degraded as you can see in the badges 
+- full namespaces in all methods declarations, instead of importing the classes before the class
+- not checking if an index is set before accessing it and another error prone constructions
+- some classes are really complex due to a lot of set/get/isset/unset methods
+- not supporting declared enum types
+
+I will create a xsd to php software on my own for doing this in the future as I haven't found any really good one. 
+Meanwhile, I suggest **NOT USING** this package yet.
+
 ## Installation
 
 This package can be installed via [Composer](http://getcomposer.org) by requiring the
